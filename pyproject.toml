@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frontierdrive"
+version = "0.1.0"
+description = "Capability-frontier estimation and adaptive curricula for autonomous driving"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+sampler = ["torch>=2.0,<3"]
+diagnostics = ["umap-learn>=0.5"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["frontierdrive*"]

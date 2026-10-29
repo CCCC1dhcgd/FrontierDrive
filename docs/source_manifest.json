@@ -1,0 +1,113 @@
+{
+  "snapshot_date": "2026-09-23",
+  "files": [
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/identify_boundary.py",
+      "release": "frontierdrive/capability_frontier.py",
+      "source_sha256": "e640224d189b1e41282ec6a862a0fd278e3048fa7b701d4f5b4c63974407cf0d",
+      "release_sha256": "e640224d189b1e41282ec6a862a0fd278e3048fa7b701d4f5b4c63974407cf0d"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/retrieve_boundary_train.py",
+      "release": "frontierdrive/frontier_retrieval.py",
+      "source_sha256": "be3bffc130b5c2af038eb0b9278a0452fa958d97b990d3ae8a7087c1b3c7ecb8",
+      "release_sha256": "be3bffc130b5c2af038eb0b9278a0452fa958d97b990d3ae8a7087c1b3c7ecb8"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/memory_augmented_prepare_loop.py",
+      "release": "frontierdrive/curriculum_controller.py",
+      "source_sha256": "26bb3172bb5a367fd30e52dec23f0dc28281a1d7700d90f19a8115e4d01f189e",
+      "release_sha256": "664597375f15e36024b19fbb1d18ffb580f55e13e7a30b0c2040b51c60d950e1"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/cross_stage_memory.py",
+      "release": "frontierdrive/learning_memory.py",
+      "source_sha256": "aab7c2067a5e47c1b7fa123534cc9df9b347099c2f94ea025d132e7ea67b64b3",
+      "release_sha256": "aab7c2067a5e47c1b7fa123534cc9df9b347099c2f94ea025d132e7ea67b64b3"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/curriculum_execution_harness.py",
+      "release": "frontierdrive/execution_harness.py",
+      "source_sha256": "c948389290c83ef16313c51a35c69ad45c6ca4758ca7445f5dadc980b6040ffe",
+      "release_sha256": "873df652a0315d59d30cd23cb76b68938c04e8a77a62e7bc82057eda6e1e0a48"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/frontierdrive_schemas.py",
+      "release": "frontierdrive/schemas.py",
+      "source_sha256": "7d22c08b86666755c2c8c2242c79a10862d1d48a79712d63ff7e7c4504469d65",
+      "release_sha256": "7d22c08b86666755c2c8c2242c79a10862d1d48a79712d63ff7e7c4504469d65"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/summarize_eval.py",
+      "release": "frontierdrive/evaluation_summary.py",
+      "source_sha256": "64d37cbbd4692dfb4dd2eab5dbf750a614e2d88e2888c31f48c43b06d34b9abe",
+      "release_sha256": "64d37cbbd4692dfb4dd2eab5dbf750a614e2d88e2888c31f48c43b06d34b9abe"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/tbat_sampler.py",
+      "release": "frontierdrive/curriculum_sampler.py",
+      "source_sha256": "ccb670e53ecc84d4178366d52b924d912a91bc636fb2f2e358b7bb3cac75f525",
+      "release_sha256": "9702b0a14ed0dbed94cada2cc98aba1123e953d5aa9a56776b697be1f82a76db"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/read_training_proposal.py",
+      "release": "frontierdrive/read_curriculum_plan.py",
+      "source_sha256": "449770cfe9b1ae964674aa70ff646e1b018dde7c72fc43781392cc9bfa95368e",
+      "release_sha256": "449770cfe9b1ae964674aa70ff646e1b018dde7c72fc43781392cc9bfa95368e"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/reweight_tbat_manifest.py",
+      "release": "frontierdrive/reweight_manifest.py",
+      "source_sha256": "c1efc3d726ee5dbc6d738c0a820ac381a7f5f3634973d89dd8574f54695ea912",
+      "release_sha256": "c1efc3d726ee5dbc6d738c0a820ac381a7f5f3634973d89dd8574f54695ea912"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/visualize_retrieval.py",
+      "release": "frontierdrive/visualization.py",
+      "source_sha256": "6e2ef295606f0d77fb452b6961333ec5ff49a6f628c9096166580e1e0a8ad6fd",
+      "release_sha256": "e7976922475eb7af57d9f386e97dcb061b40c7e3a42d0b40bc044cbcb453847f"
+    },
+    {
+      "source": "SimScale/scripts/cbs/extract_features.py",
+      "release": "frontierdrive/features/extract.py",
+      "source_sha256": "4b057436417c0f655d98160d406655086aee0c99cb49f7b2626828ae09fc09e0",
+      "release_sha256": "624e0ec7c3d2925ef4053e54f1c618e327b026bba6bb49f49bb17270d630bcaf"
+    },
+    {
+      "source": "SimScale/scripts/cbs/align_features.py",
+      "release": "frontierdrive/features/align.py",
+      "source_sha256": "4157ae0e039716780afdf711fd2927ce222d4760830e5317368489bcb59d7325",
+      "release_sha256": "4157ae0e039716780afdf711fd2927ce222d4760830e5317368489bcb59d7325"
+    },
+    {
+      "source": "SimScale/scripts/cbs/sanity_check.py",
+      "release": "frontierdrive/features/diagnostics.py",
+      "source_sha256": "da4cb5fd56cc43cb019056f8638fded639f336383c9476ae9b55d9438ad9c0c9",
+      "release_sha256": "da4cb5fd56cc43cb019056f8638fded639f336383c9476ae9b55d9438ad9c0c9"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/run_training_tbat.py",
+      "release": "frontierdrive/integrations/navsim/train_diffusiondrive.py",
+      "source_sha256": "0bf01a7bfffcadce036eea79c80b40f06f8f1c6f94eba30e1c192c3152d4efad",
+      "release_sha256": "40d4df39e624b8396daf81fe6c6498f0cba9799c32d3e0d2ffa35d784bc92534"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/run_training_tbat_transfuser.py",
+      "release": "frontierdrive/integrations/navsim/train_ltf.py",
+      "source_sha256": "1fde6edf54a36f549027e65d406f99ce851a4ea835008b203c8c05c957b88966",
+      "release_sha256": "f67e95700d351540e037c1d4a363515c0ea0c37fb3c9afdfce831ccd7c472a9b"
+    },
+    {
+      "source": "SimScale/navsim/planning/script/run_training_meanfuser.py",
+      "release": "frontierdrive/integrations/navsim/train_meanfuser.py",
+      "source_sha256": "f93088ed772b3f7a1015d3cbf6b49ba909b27c3fb887c4be4c4ef95d559e962f",
+      "release_sha256": "896a80b5696b982f779af1c33ab98b3a1aabbd2e087a0a12c6d0bc90989dd87e"
+    },
+    {
+      "source": "SimScale/scripts/cbs/train_boundary/run_tbat_prepare_stage.sh",
+      "release": "scripts/prepare_stage.sh",
+      "source_sha256": "109a2c82eb69d02092694d1646293f824d7bd9d8e3cec36bfd04e0048a6e5f01",
+      "release_sha256": "97141a1ea133eb886a7982c301db3400172f5702d0e7899b104dcceb186b7487"
+    }
+  ]
+}
