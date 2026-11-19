@@ -1,0 +1,79 @@
+{
+  "manuscript_title": "Self-learning at the frontier of competence in autonomous driving",
+  "source_manuscript": "main.tex",
+  "export_width_px": 2400,
+  "figures": [
+    {
+      "figure": 1,
+      "title": "Learning along a moving capability frontier",
+      "asset": "framework.png",
+      "source_pdf": "framework.pdf",
+      "source_sha256": "8e6e79aa237eb7c8527c1616cd184a44bff81dc47f148eca8d962d515910afb9",
+      "asset_sha256": "96576a52e2f295345bd660f47d06d4339948eae0302a862f9e1ddd78bcb8db64",
+      "dimensions_px": [
+        2400,
+        1591
+      ]
+    },
+    {
+      "figure": 2,
+      "title": "Learning gains near the capability frontier",
+      "asset": "capability-frontier.png",
+      "source_pdf": "fig2_capability_frontier.pdf",
+      "source_sha256": "025f11417c3193a92a5a4074a9bdb462a156d86f2dc7b8d501c1bb85c8bf66ce",
+      "asset_sha256": "a7e7a47524ec1d80895163474a3136a6117c509c589f2e008608e337c4afa97f",
+      "dimensions_px": [
+        2400,
+        984
+      ]
+    },
+    {
+      "figure": 3,
+      "title": "Cross-planner performance and component study",
+      "asset": "planner-performance.png",
+      "source_pdf": "fig3_method_performance.pdf",
+      "source_sha256": "b87094bdd4f7305bb444f7792775d36607c24567e65250d0b1fce62e405f4545",
+      "asset_sha256": "450721f56351a5a23cd6ce5039acc2c3d4cc9a5a51fcd2783ad0aeab8bcc0b6b",
+      "dimensions_px": [
+        2400,
+        2623
+      ]
+    },
+    {
+      "figure": 4,
+      "title": "Frontier migration across curriculum stages",
+      "asset": "frontier-migration.png",
+      "source_pdf": "fig4_diffusiondrive_spatial_migration.pdf",
+      "source_sha256": "c942da5ac729d5674996d3733a38c46013aebac9b0e3a8c66798606c1a91690d",
+      "asset_sha256": "bc4cf464056d95f84bfc18a2836f73eb5ab46db90b43dc6cd287aba20494860e",
+      "dimensions_px": [
+        2400,
+        1465
+      ]
+    },
+    {
+      "figure": 5,
+      "title": "Trajectory-level driving behavior",
+      "asset": "driving-behavior.webp",
+      "source_pdf": "fig5_driving_behavior.pdf",
+      "source_sha256": "3452c9d37bdd7260e8f24699d4ba374d3d14bd6090634500ea8bfbe6adc19bb9",
+      "asset_sha256": "a3fda5b4b9eff61d496b15afd0194b50a579ad25b22790f7833dbf4586be2579",
+      "dimensions_px": [
+        2400,
+        2220
+      ]
+    },
+    {
+      "figure": 6,
+      "title": "Real-vehicle deployment and driving sequences",
+      "asset": "real-vehicle.webp",
+      "source_pdf": "Vehicle_Test.pdf",
+      "source_sha256": "da782e3a7d42cb7e1dab9b90fec2d7de85788c03c2a9ef85fa33f90aff7626d3",
+      "asset_sha256": "231d7fd67ec115778cd9a4b40526322aa82f1c598cabd86dde0a53fd21c397e9",
+      "dimensions_px": [
+        2400,
+        3157
+      ]
+    }
+  ]
+}

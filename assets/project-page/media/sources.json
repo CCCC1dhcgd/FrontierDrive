@@ -1,0 +1,128 @@
+[
+  {
+    "asset": "stage-1.png",
+    "source": "../../../assest/frontier-migration.png",
+    "crop_box": [
+      64,
+      88,
+      904,
+      825
+    ],
+    "dimensions": [
+      840,
+      737
+    ]
+  },
+  {
+    "asset": "stage-5.png",
+    "source": "../../../assest/frontier-migration.png",
+    "crop_box": [
+      914,
+      88,
+      1654,
+      825
+    ],
+    "dimensions": [
+      740,
+      737
+    ]
+  },
+  {
+    "asset": "stage-9.png",
+    "source": "../../../assest/frontier-migration.png",
+    "crop_box": [
+      1663,
+      88,
+      2400,
+      825
+    ],
+    "dimensions": [
+      737,
+      737
+    ]
+  },
+  {
+    "asset": "drive-junction.webp",
+    "source": "../../../assest/real-vehicle.webp",
+    "crop_box": [
+      214,
+      1060,
+      2387,
+      1448
+    ],
+    "dimensions": [
+      2173,
+      388
+    ]
+  },
+  {
+    "asset": "drive-emergence.webp",
+    "source": "../../../assest/real-vehicle.webp",
+    "crop_box": [
+      214,
+      1459,
+      2387,
+      1836
+    ],
+    "dimensions": [
+      2173,
+      377
+    ]
+  },
+  {
+    "asset": "drive-intersection.webp",
+    "source": "../../../assest/real-vehicle.webp",
+    "crop_box": [
+      214,
+      1856,
+      2387,
+      2231
+    ],
+    "dimensions": [
+      2173,
+      375
+    ]
+  },
+  {
+    "asset": "drive-interaction.webp",
+    "source": "../../../assest/real-vehicle.webp",
+    "crop_box": [
+      214,
+      2250,
+      2387,
+      2632
+    ],
+    "dimensions": [
+      2173,
+      382
+    ]
+  },
+  {
+    "asset": "drive-night.webp",
+    "source": "../../../assest/real-vehicle.webp",
+    "crop_box": [
+      214,
+      2651,
+      2387,
+      3036
+    ],
+    "dimensions": [
+      2173,
+      385
+    ]
+  },
+  {
+    "asset": "campus-route.webp",
+    "source": "../../../assest/real-vehicle.webp",
+    "crop_box": [
+      1185,
+      62,
+      2400,
+      971
+    ],
+    "dimensions": [
+      1215,
+      909
+    ]
+  }
+]

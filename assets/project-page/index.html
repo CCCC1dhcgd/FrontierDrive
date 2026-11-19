@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" data-motion="playing">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f7f7">
+  <title>FrontierDrive — Learn at the frontier.</title>
+  <meta name="description" content="Self-learning at the frontier of competence in autonomous driving. FrontierDrive finds the experience a driving policy is ready to learn from, then moves the curriculum as capability grows.">
+  <meta property="og:title" content="FrontierDrive — Learn at the frontier.">
+  <meta property="og:description" content="A moving capability frontier. Three planner families. From learning gains to real-world driving. Research from Tongji University.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../../assest/framework.png">
+  <link rel="icon" href="media/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="frontier-mark" viewBox="0 0 64 64"><path d="M8 43C3 19 25 6 46 14C58 19 59 34 50 43C42 52 27 48 25 38C22 28 34 20 43 27"/><path d="M15 50C-1 25 17-1 44 5M22 57C45 65 66 47 62 25M16 37C12 22 29 11 43 19"/><circle cx="44" cy="28" r="4"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="icon-paper" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V3H3v13h5"/></symbol>
+    <symbol id="icon-expand" viewBox="0 0 24 24"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="FrontierDrive home"><svg class="brand-mark" aria-hidden="true"><use href="#frontier-mark"/></svg><span>Frontier<span class="brand-light">Drive</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#idea">The idea</a><a href="#method">Method</a><a href="#results">Results</a><a href="#evolution">Evolution</a><a href="#driving">On the road</a>
+    </nav>
+    <div class="header-tools">
+      <a class="github-link" href="https://github.com/CCCC1dhcgd/FrontierDrive" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Pause visual effects" aria-pressed="false" title="Pause visual effects"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="pause-icon" d="M7 5v10M13 5v10"/><path class="play-icon" d="m7 5 8 5-8 5Z"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <div class="color-field field-blue"></div><div class="color-field field-rose"></div>
+        <svg class="contour-fallback" viewBox="0 0 1600 950" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#7895b2" stroke-width="1"><ellipse cx="1390" cy="470" rx="550" ry="370" transform="rotate(-30 1390 470)"/><ellipse cx="1390" cy="470" rx="510" ry="330" transform="rotate(-30 1390 470)"/><ellipse cx="1390" cy="470" rx="470" ry="290" transform="rotate(-30 1390 470)"/><ellipse cx="1390" cy="470" rx="430" ry="250" transform="rotate(-30 1390 470)"/><ellipse cx="90" cy="690" rx="440" ry="290" transform="rotate(25 90 690)"/><ellipse cx="90" cy="690" rx="400" ry="250" transform="rotate(25 90 690)"/><ellipse cx="90" cy="690" rx="360" ry="210" transform="rotate(25 90 690)"/></g></svg>
+        <canvas id="frontier-field"></canvas>
+        <div class="hero-veil"></div>
+      </div>
+      <div class="hero-content wrap">
+        <p class="eyebrow hero-eyebrow"><span class="small-mark"></span> Capability-aware self-learning</p>
+        <div class="hero-wordmark"><svg aria-hidden="true"><use href="#frontier-mark"/></svg><span>Frontier<span class="wordmark-drive">Drive</span></span></div>
+        <h1 id="hero-title">Self-learning at the frontier of competence<br class="wide-only"> in autonomous driving</h1>
+        <p class="hero-tagline">Find the experience that moves you forward.</p>
+        <div class="authors" aria-label="Authors"><span>Yicheng Guo</span><span>Chengkai Xu</span><span>Zhoudong Yan</span><span>Cheng Qin</span><span>Hai Lin</span><span>Shiyu Fang</span><span>Peng Hang</span><span>Jian Sun</span></div>
+        <p class="affiliation">Tongji University</p>
+        <div class="hero-actions">
+          <!-- Replace href="#" with the paper URL when available. -->
+          <a class="button button-primary" href="#" data-paper-link aria-disabled="true"><svg aria-hidden="true"><use href="#icon-paper"/></svg>Paper</a>
+          <a class="button button-glass" href="https://github.com/CCCC1dhcgd/FrontierDrive" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#icon-code"/></svg>Code</a>
+          <a class="button button-glass" href="#citation">Cite this work</a>
+        </div>
+      </div>
+      <div class="hero-bottom wrap">
+        <p class="hero-manifesto">A changing policy.<br><strong>A moving frontier.</strong></p>
+        <a class="scroll-cue" href="#idea"><span class="scroll-track" aria-hidden="true"><i></i></span>Explore the research</a>
+        <div class="hero-footnote"><span>Regression · Diffusion · Flow matching</span><strong>One learning principle.</strong></div>
+      </div>
+    </section>
+
+    <section class="section idea-section" id="idea" aria-labelledby="idea-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">The learning principle</p>
+        <div class="section-heading reveal">
+          <h2 id="idea-title">Challenge.<br>Within <em>reach.</em></h2>
+          <div class="section-intro"><p>The value of a scene changes with the learner.</p><p>FrontierDrive finds experiences that are challenging and learnable for the current policy, then follows this frontier as capability grows.</p></div>
+        </div>
+        <div class="principle-band reveal">
+          <div class="frontier-range"><span class="range-number">20<span>–</span>60<sup>th</sup></span><p>Success-probability percentiles</p></div>
+          <div><h3>Where learning gains peak.</h3><p>Across three planner families, the strongest gains concentrate in this intermediate region of policy–scene compatibility.</p></div>
+          <div class="range-track" aria-hidden="true"><span>Challenging</span><div><i></i><b></b></div><span>Mastered</span></div>
+        </div>
+        <figure class="paper-figure reveal">
+          <a class="zoomable" href="../../assest/capability-frontier.png" data-caption="Learning gains across estimated success-probability percentiles. Related training scenes from each percentile bin supply an independent ten-epoch update.">
+            <img src="../../assest/capability-frontier.png" width="2400" height="984" loading="lazy" alt="Learning gains peak in the intermediate success-probability region for LTF, DiffusionDrive, and MeanFuser.">
+            <span class="image-action"><svg aria-hidden="true"><use href="#icon-expand"/></svg>Explore figure</span>
+          </a>
+        </figure>
+        <p class="figure-note">Three planner families. Independent ten-epoch updates. A shared frontier of useful experience.</p>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">The FrontierDrive loop</p>
+        <div class="section-heading reveal"><h2 id="method-title">Let capability<br>set the <em>curriculum.</em></h2><p>Evaluate. Locate. Retrieve. Learn.<br>Each policy update creates the evidence for the next.</p></div>
+        <div class="loop-explorer reveal">
+          <div class="loop-tabs" role="tablist" aria-label="Learning loop">
+            <button id="step-estimate" type="button" role="tab" aria-selected="true" aria-controls="loop-panel" data-step="estimate"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25V7m0 18h23M10 20l5-7 5 3 7-10"/><circle cx="15" cy="13" r="2"/></svg><span>Estimate capability</span></button>
+            <button id="step-retrieve" type="button" role="tab" aria-selected="false" aria-controls="loop-panel" tabindex="-1" data-step="retrieve"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="9"/><circle cx="14" cy="14" r="4"/><path d="m21 21 7 7"/></svg><span>Retrieve experience</span></button>
+            <button id="step-allocate" type="button" role="tab" aria-selected="false" aria-controls="loop-panel" tabindex="-1" data-step="allocate"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 9h22M5 23h22"/><circle cx="12" cy="9" r="4"/><circle cx="21" cy="23" r="4"/></svg><span>Shape the curriculum</span></button>
+            <button id="step-evolve" type="button" role="tab" aria-selected="false" aria-controls="loop-panel" tabindex="-1" data-step="evolve"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M26 12A11 11 0 0 0 7 7L3 12m0-7v7h7m-4 8a11 11 0 0 0 19 5l4-5m0 7v-7h-7"/></svg><span>Learn and evolve</span></button>
+          </div>
+          <div class="loop-panel" id="loop-panel" role="tabpanel" aria-labelledby="step-estimate" tabindex="0">
+            <div><span class="panel-eyebrow" id="step-kicker">Policy-relative understanding</span><h3 id="step-title">Know what the policy<br>is ready to learn.</h3><p id="step-description">Sequential scene-level evaluations separate policy capability from scene difficulty. Estimated success probabilities reveal the current frontier.</p></div>
+            <div class="loop-expression"><span id="step-expression">p = σ(θ − β)</span><p id="step-expression-note">Capability meets scene difficulty.</p></div>
+          </div>
+        </div>
+        <figure class="paper-figure framework-figure reveal"><a class="zoomable" href="../../assest/framework.png" data-caption="FrontierDrive connects capability estimation, frontier-guided retrieval, agent-guided curriculum adaptation, and policy updates in a closed learning loop."><img src="../../assest/framework.png" width="2400" height="1591" alt="FrontierDrive framework: a moving capability frontier determines training-scene retrieval and frontier-focused sampling with retention replay." loading="lazy"><span class="image-action"><svg aria-hidden="true"><use href="#icon-expand"/></svg>Explore framework</span></a></figure>
+        <div class="agent-heading reveal"><h3>Four roles.<br><em>One evolving learning strategy.</em></h3><p>Agents turn capability evidence and cross-stage memory into the next training allocation.</p></div>
+        <div class="agent-grid reveal">
+          <article><span class="role-symbol" aria-hidden="true">⌁</span><h4>Capability Analyst</h4><p>Interpret progress and identify the next learning opportunities.</p></article>
+          <article><span class="role-symbol" aria-hidden="true">◎</span><h4>Frontier Mapper</h4><p>Connect frontier regions to their available training support.</p></article>
+          <article><span class="role-symbol" aria-hidden="true">⊞</span><h4>Curriculum Planner</h4><p>Balance frontier learning with retention replay.</p></article>
+          <article><span class="role-symbol" aria-hidden="true">✓</span><h4>Curriculum Verifier</h4><p>Verify the allocation before the next policy update.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section" id="results" aria-labelledby="results-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">Across planner families</p>
+        <div class="section-heading reveal"><h2 id="results-title">Different planners.<br><em>Shared gains.</em></h2><p>Frontier-guided training improves regression, diffusion, and flow-matching planners on both evaluation sets.</p></div>
+        <div class="results-board reveal">
+          <div class="results-toolbar"><div class="segmented" role="group" aria-label="Evaluation benchmark"><button type="button" data-benchmark="navtest" aria-pressed="true">NavTest</button><button type="button" data-benchmark="navhard" aria-pressed="false">NavHard</button></div><div class="chart-legend"><span><i class="legend-base"></i>Base</span><span><i class="legend-frontier"></i>FrontierDrive</span></div></div>
+          <div class="chart-context"><h3 id="benchmark-title">NavTest</h3><p>EPDMS · Higher is better</p></div>
+          <div class="result-rows" id="result-rows">
+            <article class="result-row"><div class="planner-label"><h4>LTF</h4><p>Regression</p></div><div class="bar-pair"><div class="bar-line"><span class="bar-label">Base</span><div class="bar-track"><span class="bar base" style="--value:79.1%"></span></div><b class="base-score">79.1</b></div><div class="bar-line"><span class="bar-label">FrontierDrive</span><div class="bar-track"><span class="bar frontier" style="--value:84.7%"></span></div><b class="frontier-score">84.7</b></div></div><div class="gain"><strong>+5.6</strong><span>EPDMS points</span></div></article>
+            <article class="result-row"><div class="planner-label"><h4>DiffusionDrive</h4><p>Diffusion</p></div><div class="bar-pair"><div class="bar-line"><span class="bar-label">Base</span><div class="bar-track"><span class="bar base" style="--value:84.5%"></span></div><b class="base-score">84.5</b></div><div class="bar-line"><span class="bar-label">FrontierDrive</span><div class="bar-track"><span class="bar frontier" style="--value:87.3%"></span></div><b class="frontier-score">87.3</b></div></div><div class="gain"><strong>+2.8</strong><span>EPDMS points</span></div></article>
+            <article class="result-row"><div class="planner-label"><h4>MeanFuser</h4><p>Flow matching</p></div><div class="bar-pair"><div class="bar-line"><span class="bar-label">Base</span><div class="bar-track"><span class="bar base" style="--value:84.2%"></span></div><b class="base-score">84.2</b></div><div class="bar-line"><span class="bar-label">FrontierDrive</span><div class="bar-track"><span class="bar frontier" style="--value:87.5%"></span></div><b class="frontier-score">87.5</b></div></div><div class="gain"><strong>+3.3</strong><span>EPDMS points</span></div></article>
+          </div>
+          <div class="chart-axis" aria-hidden="true"><span>0</span><span>25</span><span>50</span><span>75</span><span>100 EPDMS</span></div>
+          <p class="sr-only" id="results-announcement" aria-live="polite"></p>
+        </div>
+        <div class="results-bottom reveal"><p>Matched initialization and training budget within each planner.</p><a class="text-link zoomable" href="../../assest/planner-performance.png" data-caption="Cross-planner results, component metrics, ablations, and LTF scene-allocation comparisons.">Explore all results <svg aria-hidden="true"><use href="#icon-expand"/></svg></a></div>
+        <div class="result-callout reveal"><span class="eyebrow">Scene allocation matters</span><p>FrontierDrive leads Uniform, Random, Hard mining, and MOSAIC in the LTF comparison.</p><div><strong>84.7<span>NavTest</span></strong><strong>24.6<span>NavHard</span></strong></div></div>
+      </div>
+    </section>
+
+    <section class="section evolution-section" id="evolution" aria-labelledby="evolution-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">The frontier in motion</p>
+        <div class="section-heading reveal"><h2 id="evolution-title">As the policy grows,<br>the frontier <em>moves.</em></h2><p>Follow DiffusionDrive through nine curriculum stages. New capability brings new training opportunities into reach.</p></div>
+        <div class="evolution-layout reveal">
+          <div class="stage-story">
+            <div class="segmented stage-controls" role="group" aria-label="Curriculum stage"><button type="button" data-stage="1" aria-pressed="true">Stage 1</button><button type="button" data-stage="5" aria-pressed="false">Stage 5</button><button type="button" data-stage="9" aria-pressed="false">Stage 9</button></div>
+            <p class="eyebrow">Estimated policy capability</p><div class="capability-value" id="capability-value">−0.81</div>
+            <h3 id="stage-title">An initial frontier.</h3><p id="stage-description">The first curriculum identifies broad frontier regions and retrieves their related training support.</p>
+            <dl class="stage-counts"><div><dt>Frontier scenes</dt><dd id="frontier-count">9,918</dd></div><div><dt>Training support</dt><dd id="support-count">7,433</dd></div></dl>
+            <p class="sr-only" id="stage-announcement" aria-live="polite"></p>
+          </div>
+          <figure class="stage-figure"><a class="zoomable" id="stage-zoom" href="../../assest/frontier-migration.png" data-caption="DiffusionDrive's capability frontier and training support across nine curriculum stages. The scenario space is shown in its first two principal components."><img id="stage-image" src="media/stage-1.png" width="840" height="737" alt="Stage 1: estimated capability −0.81, 9,918 frontier scenes, and 7,433 training support scenes." loading="lazy"><span class="image-action"><svg aria-hidden="true"><use href="#icon-expand"/></svg>Full evolution</span></a><figcaption><span><i class="key-scene"></i>Frontier scenes</span><span><i class="key-support"></i>Training support</span><span><i class="key-neighborhood"></i>Adaptive neighborhoods</span></figcaption></figure>
+        </div>
+        <div class="evolution-metrics reveal"><div><strong>9</strong><span>Curriculum stages</span></div><div><strong>&gt;97<span>%</span></strong><span>Frontier coverage at every stage</span></div><div><strong>&gt;85<span>%</span></strong><span>Largest support turnover between stages</span></div></div>
+      </div>
+    </section>
+
+    <section class="section driving-section" id="driving" aria-labelledby="driving-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">From curriculum to control</p>
+        <div class="section-heading reveal"><h2 id="driving-title">Learn at the frontier.<br><em>Drive in the world.</em></h2><p>The FrontierDrive-trained MeanFuser policy takes the wheel on a campus circuit in Shanghai.</p></div>
+        <div class="driving-intro reveal"><div><span class="editorial-label">Physical vehicle deployment</span><h3>One route.<br>A world of interactions.</h3><p>Junctions, emerging road users, dense traffic, and nighttime driving bring the learned policy into real traffic interactions.</p><a class="text-link zoomable" href="../../assest/real-vehicle.webp" data-caption="Real-vehicle deployment of FrontierDrive-trained MeanFuser. Blue trajectories are from FrontierDrive; red baseline trajectories are generated offline on the same recorded sensor inputs.">View the vehicle and complete sequences <svg aria-hidden="true"><use href="#icon-expand"/></svg></a></div><figure><a class="zoomable route-image" href="media/campus-route.webp" data-caption="The campus driving circuit in Shanghai, showing the starting point, route, and ending point."><img src="media/campus-route.webp" width="1215" height="909" loading="lazy" alt="Aerial view of the campus driving circuit with its route marked in red."><span class="route-label">Shanghai · Campus circuit</span></a></figure></div>
+        <div class="drive-gallery reveal">
+          <div class="scenario-controls" role="group" aria-label="Real-world driving sequence"><button type="button" data-scenario="junction" aria-pressed="true">T-intersection</button><button type="button" data-scenario="emergence" aria-pressed="false">Emerging road user</button><button type="button" data-scenario="intersection" aria-pressed="false">Crossing flows</button><button type="button" data-scenario="interaction" aria-pressed="false">Dense interactions</button><button type="button" data-scenario="night" aria-pressed="false">Nighttime</button></div>
+          <div class="sequence-heading"><h3 id="scenario-title">A path through the junction.</h3><span>Sequence · Left to right</span></div>
+          <a class="zoomable sequence-image" id="scenario-zoom" href="media/drive-junction.webp" data-caption="T-intersection: FrontierDrive adapts its path through the junction and continues along the outgoing road."><img id="scenario-image" src="media/drive-junction.webp" width="2173" height="388" loading="lazy" alt="Four successive views of FrontierDrive driving through a T-intersection."><span class="image-action"><svg aria-hidden="true"><use href="#icon-expand"/></svg>Enlarge sequence</span></a>
+          <p id="scenario-description" class="scenario-description" aria-live="polite">The policy adapts its planned path through the junction and continues along the outgoing road.</p>
+        </div>
+        <div class="behavior-link reveal"><div><span class="eyebrow">Trajectory-level change</span><h3>Better interactions.<br>Stronger road compliance.</h3></div><a class="button button-outline zoomable" href="../../assest/driving-behavior.webp" data-caption="Four NavTest examples compare Base (red), FrontierDrive (blue), and recorded human (grey) trajectories. Interaction and road-compliance outcomes improve after frontier-guided updates.">Explore trajectory comparisons <svg aria-hidden="true"><use href="#icon-expand"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="section closing-section" id="citation" aria-labelledby="closing-title">
+      <div class="wrap">
+        <div class="closing-heading reveal"><svg class="closing-mark" aria-hidden="true"><use href="#frontier-mark"/></svg><p class="eyebrow">Keep moving the frontier.</p><h2 id="closing-title">What should your policy<br><em>learn next?</em></h2><p>Explore FrontierDrive. Build the next curriculum.</p><a class="button button-primary" href="https://github.com/CCCC1dhcgd/FrontierDrive" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#icon-code"/></svg>Explore the code</a></div>
+        <div class="citation-box reveal"><div><h3>Cite FrontierDrive</h3><button class="copy-button" id="copy-citation" type="button"><svg aria-hidden="true"><use href="#icon-copy"/></svg><span>Copy BibTeX</span></button></div><pre><code id="citation-code">@misc{guo2026frontierdrive,
+  title  = {Self-learning at the frontier of competence
+            in autonomous driving},
+  author = {Guo, Yicheng and Xu, Chengkai and Yan, Zhoudong
+            and Qin, Cheng and Lin, Hai and Fang, Shiyu
+            and Hang, Peng and Sun, Jian},
+  year   = {2026},
+  url    = {https://github.com/CCCC1dhcgd/FrontierDrive}
+}</code></pre><p class="sr-only" id="copy-status" aria-live="polite"></p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="brand" href="#home"><svg class="brand-mark" aria-hidden="true"><use href="#frontier-mark"/></svg><span>FrontierDrive</span></a><p>Tongji University · 2026</p><a href="https://github.com/CCCC1dhcgd/FrontierDrive" target="_blank" rel="noopener noreferrer">GitHub</a></footer>
+
+  <dialog class="lightbox" id="figure-dialog" aria-labelledby="figure-caption"><div class="lightbox-bar"><span>FrontierDrive · Research figures</span><button id="close-figure" type="button" aria-label="Close figure">Close <span aria-hidden="true">×</span></button></div><div class="lightbox-body"><img id="lightbox-image" alt=""><p id="figure-caption"></p><a id="original-image" target="_blank" rel="noopener noreferrer">Open full-size image</a></div></dialog>
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}.loop-tabs button:not(:first-child),.segmented button:not(:first-child),.scenario-controls button:not(:first-child),#copy-citation,.motion-toggle{display:none}.menu-toggle{display:none}#navigation{display:flex;position:static;flex-wrap:wrap}</style></noscript>
+</body>
+</html>
