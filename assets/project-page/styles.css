@@ -226,6 +226,17 @@ img { height: auto; }
 .sequence-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 27px 0 25px; }
 .sequence-heading h3 { font-size: 30px; }
 .sequence-heading>span { color: var(--muted); font-size: 14px; }
+.scenario-player { padding: 12px 12px 0; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 22px 45px -36px #112d4e45; }
+.video-frame { overflow: hidden; border-radius: 10px; background: var(--ink); aspect-ratio: 16/9; }
+.video-frame video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.video-frame video:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.video-caption { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px 20px; padding: 17px 8px; color: var(--muted); font-size: 14px; }
+.video-caption>span { color: var(--rose-ink); font-weight: 600; }
+.video-caption .text-link { font-size: 14px; min-height: 44px; }
+.video-status { margin-top: 16px; font-size: 16px; color: var(--muted); }
+.video-status a { text-decoration: underline; text-underline-offset: 4px; }
+.sequence-caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; margin: 27px 0 13px; font-size: 14px; color: var(--muted); }
+.sequence-caption>span:first-child { font-weight: 600; color: var(--ink); }
 .sequence-image { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
 .sequence-image img { width: 100%; aspect-ratio: 2173/388; object-fit: contain; }
 .scenario-description { margin-top: 23px; max-width: 850px; color: var(--muted); min-height: 3.4em; }
@@ -468,6 +479,10 @@ html[data-motion=paused] .reveal { opacity: 1; transform: none; transition: none
   .sequence-heading { display: block; margin-top: 22px; margin-bottom: 18px; }
   .sequence-heading h3 { font-size: 27px; }
   .sequence-heading>span { display: block; margin-top: 10px; }
+  .scenario-player { padding: 6px 6px 0; border-radius: 12px; }
+  .video-frame { border-radius: 7px; }
+  .video-caption { padding: 9px 6px; gap: 2px 14px; }
+  .sequence-caption { margin-top: 23px; }
   .sequence-image { overflow-x: auto; }
   .sequence-image img { width: 900px; max-width: none; }
   .sequence-image .image-action { position: sticky; left: 12px; bottom: 7px; width: max-content; margin: -27px 0 0 12px; }

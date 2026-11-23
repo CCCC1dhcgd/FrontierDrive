@@ -40,4 +40,6 @@ Set the paper URL on the `data-paper-link` anchor in `index.html`. The script re
 
 The result selectors use the manuscript's reported scores. Stage panels and real-world sequences are crops of the original paper figures. All original full figures are accessible through the figure viewer.
 
+The five On the road scenario selectors update the driving video, its poster, description, direct video link, and paper sequence together. Videos use native playback controls and load on demand without autoplay. Switching scenarios pauses the previous recording; clicking the currently selected scenario does not restart it. Switching away from the browser tab pauses playback. MP4 recordings live in `media/video/`, with matching WebP cover frames in `media/video/posters/`. The packager verifies every scenario's video and poster paths.
+
 Motion follows the visitor's reduced-motion setting and can be paused in the header. Background drawing stops while the hero is offscreen or the tab is hidden.

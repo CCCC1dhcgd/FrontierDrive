@@ -17,7 +17,7 @@ class PageReferences(HTMLParser):
         attrs = dict(attrs)
         if "id" in attrs:
             self.ids.append(attrs["id"])
-        for key in ("src", "href"):
+        for key in ("src", "href", "poster", "data-video", "data-poster"):
             if attrs.get(key):
                 self.references.append(attrs[key])
 

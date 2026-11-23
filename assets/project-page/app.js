@@ -82,7 +82,7 @@ function updateScroll() {
 function settleSection() {
   if (reducedMotion.matches || snapping || $('#figure-dialog').open ||
       menuButton.getAttribute('aria-expanded') === 'true' ||
-      document.activeElement?.closest('button,a,input,textarea,select,[role="tabpanel"]')) return;
+      document.activeElement?.closest('button,a,input,textarea,select,video,[role="tabpanel"]')) return;
   const headerHeight = $('.site-header').offsetHeight;
   const targets = $$('#main>section').map(section => Math.max(0, section.offsetTop - headerHeight));
   const nearest = targets.reduce((best, target) => Math.abs(target - window.scrollY) < Math.abs(best - window.scrollY) ? target : best, targets[0]);
@@ -183,8 +183,34 @@ const scenarios = {
   interaction: { title: 'Make room for others.', text: 'Through a densely occupied road section, the policy yields to nearby road users and adjusts its passage as available space narrows.', alt: 'Four successive views of FrontierDrive moving through dense pedestrian and non-motorized traffic.' },
   night: { title: 'Follow the road after dark.', text: 'Under nighttime illumination, the policy follows the road and continues along the campus route.', alt: 'Four successive views of FrontierDrive following the campus route at night.' }
 };
+const scenarioVideo = $('#scenario-video');
+const videoStatus = $('#video-status');
+function clearVideoStatus() {
+  videoStatus.hidden = true;
+  videoStatus.textContent = '';
+}
+scenarioVideo.addEventListener('error', () => {
+  videoStatus.textContent = 'The video could not be loaded. Use Open video to view the recording directly.';
+  videoStatus.hidden = false;
+});
+scenarioVideo.addEventListener('loadeddata', clearVideoStatus);
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) scenarioVideo.pause();
+});
 $$('[data-scenario]').forEach(button => button.addEventListener('click', () => {
+  if (button.getAttribute('aria-pressed') === 'true') return;
   const key = button.dataset.scenario, scene = scenarios[key];
+  const label = button.textContent.trim();
+  // Load only the chosen recording, and leave playback under the visitor's control.
+  scenarioVideo.pause();
+  clearVideoStatus();
+  scenarioVideo.poster = button.dataset.poster;
+  scenarioVideo.src = button.dataset.video;
+  scenarioVideo.setAttribute('aria-label', label + ' driving video');
+  scenarioVideo.load();
+  $('#video-label').textContent = label + ' · Driving footage';
+  $('#scenario-video-link').href = button.dataset.video;
+  $('#scenario-video-link').setAttribute('aria-label', 'Open ' + label + ' video in a new tab');
   $$('[data-scenario]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
   $('#scenario-title').textContent = scene.title;
   $('#scenario-description').textContent = scene.text;
