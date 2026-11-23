@@ -18,7 +18,7 @@ The public project page is **[FrontierDrive](https://cccc1dhcgd.github.io/Fronti
 
 The [GitHub Actions workflow](../../.github/workflows/project-page.yml) publishes updates from `main` whenever the page, paper figures, or workflow changes. It can also be run manually. In the repository's **Settings > Pages**, select **GitHub Actions** as the source.
 
-`build.py` packages the page at the site root, collects its images, and checks local asset paths and anchors. The original source remains in `assets/project-page/`, with paper figures in `assest/`.
+`build.py` packages the page at the site root, collects its images and videos (including nested media directories), and checks local asset paths and anchors. The original source remains in `assets/project-page/`, with paper figures in `assest/`.
 
 To prepare a fresh deployment directory locally:
 
@@ -26,7 +26,7 @@ To prepare a fresh deployment directory locally:
 python assets/project-page/build.py --output build/project-page --base-url https://cccc1dhcgd.github.io/FrontierDrive/
 ```
 
-The page uses local HTML, CSS, JavaScript, SVG, PNG, and WebP assets. It has no package installation or build step.
+The page uses local HTML, CSS, JavaScript, SVG, PNG, and WebP assets, with MP4 and WebM videos supported by the packager. It has no package installation or build step.
 
 ## Content and design
 

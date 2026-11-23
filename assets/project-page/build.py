@@ -58,9 +58,11 @@ def main():
     for folder, original in (("media", source / "media"), ("figures", repo / "assest")):
         target = destination / folder
         target.mkdir(exist_ok=True)
-        for asset in sorted(original.iterdir()):
-            if asset.suffix.lower() in {".png", ".webp", ".svg"}:
-                shutil.copy2(asset, target / asset.name)
+        for asset in sorted(original.rglob("*")):
+            if asset.is_file() and asset.suffix.lower() in {".png", ".webp", ".svg", ".mp4", ".webm"}:
+                packaged_asset = target / asset.relative_to(original)
+                packaged_asset.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(asset, packaged_asset)
     (destination / ".nojekyll").touch()
 
     parsed_page = PageReferences()
